@@ -39,7 +39,6 @@ for index, row in df.iterrows():
     pdf.cell(w=0, h=10, align='R', txt=row["Topic"], border=0)
 
     # Blank pages generation
-    # noinspection PyTypeChecker
     for i in range(row["Pages"] - 1):
         pdf.add_page()
 
@@ -51,7 +50,6 @@ for index, row in df.iterrows():
         pdf.ln(277)
         pdf.set_font('Arial', 'I', 8)  # Style I --> Italic
         pdf.set_text_color(180, 180, 180)
-        # noinspection PyArgumentList
         pdf.cell(w=0, h=10, align='R', txt=row["Topic"], border=0)
 
 # Generating the pdf file
